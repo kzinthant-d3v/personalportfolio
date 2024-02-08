@@ -172,7 +172,7 @@ const sections: Record<Navs, JSX.Element> = {
   Experience: (
     <div className="mt-8 lg:mt-0">
       <h2 className="font-bold text-transparent bg-clip-text moving-gradient mb-8 text-2xl text-center lg:hidden">
-        Experience
+        Experiences
       </h2>
     </div>
   ),
