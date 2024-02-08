@@ -1,6 +1,6 @@
 import { GradientHeader } from "..";
 import Image from "next/image";
-import HeroImg from "../../images/hero.png";
+import HeroImg from "../../images/hero.webp";
 import DownArrow from "../../icons/DownArrow.svg";
 import SectionWrapper from "../common/section-wrapper";
 
