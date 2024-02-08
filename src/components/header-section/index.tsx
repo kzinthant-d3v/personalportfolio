@@ -3,7 +3,6 @@ import Image from "next/image";
 import HeroImg from "../../images/hero.webp";
 import DownArrow from "../../icons/DownArrow.svg";
 import SectionWrapper from "../common/section-wrapper";
-import { heroBase64 } from "@/images/hero";
 
 const HeaderSection = () => {
   return (
@@ -43,7 +42,6 @@ const HeaderSection = () => {
               src={HeroImg}
               alt="Hero Image"
               loading="eager"
-              blurDataURL={heroBase64}
               placeholder="blur"
             />
           </div>
