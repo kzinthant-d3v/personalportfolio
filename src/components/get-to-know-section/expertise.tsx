@@ -195,7 +195,7 @@ const Expertise = () => {
             key={nav}
             className={`cursor-pointer ${
               nav === activeNav
-                ? "text-transparent font-semibold bg-clip-text moving-gradient"
+                ? "text-transparent font-semibold bg-clip-text bg-black dark:moving-gradient"
                 : "text-[#93ACC8]"
             }`}
             onClick={() => setActiveNav(nav as Navs)}
