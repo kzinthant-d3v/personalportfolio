@@ -1,8 +1,11 @@
+import "./global.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import fonts from "@/fonts";
+import GlobalProviders from "@/providers/GlobalProviders";
+import { twMerge } from "tailwind-merge";
+import { NavBar } from "@/components";
 
-const inter = Inter({ subsets: ["latin"] });
+const myFonts = fonts;
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning className="dark">
+      <body
+        className={twMerge(
+          myFonts.className,
+          "bg-white dark:bg-black px-6 lg:px-[10%] xl:px-[20%] py-6 2xl:py-20 based-text-size"
+        )}
+      >
+        <NavBar />
+        <GlobalProviders>{children}</GlobalProviders>
+      </body>
     </html>
   );
 }
