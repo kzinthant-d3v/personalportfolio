@@ -1,5 +1,6 @@
 "use client";
-import { HeaderSection, NavBar } from "@/components";
+import { GetToKnowSection, HeaderSection, NavBar } from "@/components";
+import ThemeChanger from "@/components/common/theme-changer";
 import { useTheme } from "next-themes";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
   return (
     <div>
       <HeaderSection />
+      <GetToKnowSection />
     </div>
   );
 }

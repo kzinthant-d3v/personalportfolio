@@ -14,8 +14,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        black: "#1F2028",
-        red: "#AA0000",
+        "dark-bg": "#171717",
+        black: "#3A3A3A",
+        dark: "#2D3039",
+        active: "#3385ff",
+        "white-bg": "#fefff5",
       },
       screens: {
         sm: "393px",
@@ -26,6 +29,14 @@ const config: Config = {
       },
       fontWeight: {
         "extra-bold": "800",
+      },
+      animation: {
+        gradient: "gradient 8s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          to: { "background-position": "200% center" },
+        },
       },
     },
   },

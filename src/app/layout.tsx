@@ -4,6 +4,7 @@ import fonts from "@/fonts";
 import GlobalProviders from "@/providers/GlobalProviders";
 import { twMerge } from "tailwind-merge";
 import { NavBar } from "@/components";
+import ThemeChanger from "@/components/common/theme-changer";
 
 const myFonts = fonts;
 
@@ -18,15 +19,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
+    <html lang="en" suppressHydrationWarning className="white">
       <body
         className={twMerge(
           myFonts.className,
-          "bg-white dark:bg-black px-6 lg:px-[10%] xl:px-[20%] py-6 2xl:py-20 based-text-size"
+          "text-black dark:text-white bg-white dark:bg-dark-bg px-6 lg:px-[10%] xl:px-[20%] py-6 2xl:py-20 based-text-size"
         )}
       >
-        <NavBar />
-        <GlobalProviders>{children}</GlobalProviders>
+        <GlobalProviders>
+          <NavBar />
+          <div className="absolute right-[5%] top-[2.5%]">
+            <ThemeChanger />
+          </div>
+          {children}
+        </GlobalProviders>
       </body>
     </html>
   );
