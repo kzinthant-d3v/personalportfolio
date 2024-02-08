@@ -42,7 +42,8 @@ const HeaderSection = () => {
               src={HeroImg}
               alt="Hero Image"
               loading="eager"
-              width={500}
+              width={750}
+              height={750}
               className="mx-auto"
             />
           </div>
