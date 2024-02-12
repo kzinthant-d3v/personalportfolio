@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('../night-owl.css');
+@import url('../atom-one-light.css');
+
 @layer base {
     .based-text-size {
         @apply text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-5xl;

@@ -7,8 +7,15 @@ import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 
 const ThemeChanger = () => {
-  const { theme, setTheme } = useTheme();
-  const isDark = theme === "dark";
+  const { theme, systemTheme, setTheme } = useTheme();
+  const isDark =
+    theme === "system"
+      ? systemTheme === "dark"
+        ? true
+        : false
+      : theme === "dark"
+      ? true
+      : false;
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
     setIsMounted(true);
